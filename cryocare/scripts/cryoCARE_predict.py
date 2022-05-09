@@ -36,8 +36,8 @@ def main():
 
     mean, std = dm.train_dataset.mean, dm.train_dataset.std
 
-    model.predict(even.data, odd.data, denoised.data, axes='ZYXC', normalizer=None, mean=mean, std=std,
-                  n_tiles=config['n_tiles'] + [1, ])
+    # model.predict(even.data, odd.data, denoised.data, axes='ZYXC', normalizer=None, mean=mean, std=std, n_tiles=config['n_tiles'] + [1, ])
+    model.predict(even.data, odd.data, denoised.data, axes='YXC', normalizer=None, mean=mean, std=std, n_tiles=config['n_tiles'] + [1, ])
 
     for l in even.header.dtype.names:
         if l == 'label':

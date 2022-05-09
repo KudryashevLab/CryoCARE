@@ -19,7 +19,7 @@ def main():
     dm.load(config['train_data'])
 
     net_conf = Config(
-        axes='ZYXC',
+        axes=config['axes'],
         train_loss='mse',
         train_epochs=config['epochs'],
         train_steps_per_epoch=config['steps_per_epoch'],
@@ -27,7 +27,7 @@ def main():
         unet_kern_size=config['unet_kern_size'],
         unet_n_depth=config['unet_n_depth'],
         unet_n_first=config['unet_n_first'],
-        train_tensorboard=False,
+        train_tensorboard=config['train_tensorboard'],
         train_learning_rate=config['learning_rate']
     )
 

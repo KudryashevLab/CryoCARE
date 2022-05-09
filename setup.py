@@ -29,6 +29,8 @@ setuptools.setup(
         "psutil"
     ],
     scripts=[
+	    'cryocare/internals/CryoCAREDataModule.py',
+	    'cryocare/internals/CryoCARE.py',
         'cryocare/scripts/cryoCARE_extract_train_data.py',
         'cryocare/scripts/cryoCARE_train.py',
         'cryocare/scripts/cryoCARE_predict.py'
